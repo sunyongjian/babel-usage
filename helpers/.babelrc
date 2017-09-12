@@ -1,0 +1,15 @@
+{
+  "plugins": [
+    "transform-async-to-generator",
+    "external-helpers"
+  ]
+}
+
+// {
+//   "presets": [
+//     "env"
+//   ],
+//   "plugins": [
+//     "external-helpers"
+//   ]
+// }

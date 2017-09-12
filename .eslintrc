@@ -1,0 +1,7 @@
+{
+  "extends": "airbnb-base",
+  "plugins": [
+    "import"
+  ],
+  "ignore": "**/node_modules/**"
+}
