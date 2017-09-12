@@ -17,8 +17,10 @@ node build/build.js
 编译通过，执行通过。
 
 2. 查看 build.js 
-[!build1](./img/helper-build1.png)
-[!build2](./img/helper-build2.png)
+
+![build1](./img/helper-build1.png)
+
+![build2](./img/helper-build2.png)
 
 的确两个模块中都有 asyncToGenerator 这个函数。
 
@@ -27,7 +29,8 @@ node build/build.js
 node_modules/.bin/webpack
 ```
 编译通过，build.js 里面的 helper 函数有所更改。变成了 babelHelpers.asyncToGenerator 了，看起来是成功了，没有重复声明，都到 babelHelpers 对象里了。
-[!build3](./img/helper2.png)
+
+![build3](./img/helper2.png)
 
 执行
 ```
@@ -35,7 +38,9 @@ node build/build.js
 ```
 
 报错了。
-[!build3](./img/helper3.png)
+
+![build3](./img/helper3.png)
+
 babelHelpers is not defined
 
 4. 那就去定义 babelHelpers
