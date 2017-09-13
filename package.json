@@ -29,7 +29,7 @@
   },
   "dependencies": {
     "babel-polyfill": "^6.26.0",
-    "react": "^15.6.1",
-    "transform-runtime": "^0.0.0"
+    "babel-runtime": "^6.26.0",
+    "react": "^15.6.1"
   }
 }

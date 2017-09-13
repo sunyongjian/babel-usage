@@ -158,12 +158,17 @@ __webpack_require__(40);
 /* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function(global) {(function (global) {
+"use strict";
+/* WEBPACK VAR INJECTION */(function(global) {
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+(function (global) {
   var babelHelpers = global.babelHelpers = {};
-  babelHelpers.typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) {
-    return typeof obj;
+  babelHelpers.typeof = typeof Symbol === "function" && _typeof(Symbol.iterator) === "symbol" ? function (obj) {
+    return typeof obj === "undefined" ? "undefined" : _typeof(obj);
   } : function (obj) {
-    return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
+    return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj === "undefined" ? "undefined" : _typeof(obj);
   };
 
   babelHelpers.jsx = function () {
@@ -326,12 +331,12 @@ __webpack_require__(40);
     };
 
     return {
-      wrap: function (fn) {
+      wrap: function wrap(fn) {
         return function () {
           return new AsyncGenerator(fn.apply(this, arguments));
         };
       },
-      await: function (value) {
+      await: function _await(value) {
         return new AwaitValue(value);
       }
     };
@@ -524,7 +529,7 @@ __webpack_require__(40);
 
   babelHelpers.inherits = function (subClass, superClass) {
     if (typeof superClass !== "function" && superClass !== null) {
-      throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
+      throw new TypeError("Super expression must either be null or a function, not " + (typeof superClass === "undefined" ? "undefined" : _typeof(superClass)));
     }
 
     subClass.prototype = Object.create(superClass && superClass.prototype, {
@@ -596,7 +601,7 @@ __webpack_require__(40);
       throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
     }
 
-    return call && (typeof call === "object" || typeof call === "function") ? call : self;
+    return call && ((typeof call === "undefined" ? "undefined" : _typeof(call)) === "object" || typeof call === "function") ? call : self;
   };
 
   babelHelpers.selfGlobal = typeof global === "undefined" ? self : global;
@@ -708,9 +713,9 @@ __webpack_require__(40);
 
   babelHelpers.toConsumableArray = function (arr) {
     if (Array.isArray(arr)) {
-      for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) arr2[i] = arr[i];
-
-      return arr2;
+      for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) {
+        arr2[i] = arr[i];
+      }return arr2;
     } else {
       return Array.from(arr);
     }
@@ -749,14 +754,12 @@ module.exports = g;
 /* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
-function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step("next", value); }, function (err) { step("throw", err); }); } } return step("next"); }); }; }
-
 Object.values = __webpack_require__(12).default;
 
 console.log(Object.values({ 1: 2 }));
 
 var a = (() => {
-  var _ref = _asyncToGenerator(function* () {
+  var _ref = babelHelpers.asyncToGenerator(function* () {
     console.log('begin');
     yield new Promise(function (resolve) {
       setTimeout(function () {
@@ -1218,8 +1221,6 @@ exports.f = {}.propertyIsEnumerable;
 /* 40 */
 /***/ (function(module, exports) {
 
-function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step("next", value); }, function (err) { step("throw", err); }); } } return step("next"); }); }; }
-
 new Promise(resolve => {
   setTimeout(() => {
     resolve();
@@ -1227,7 +1228,7 @@ new Promise(resolve => {
 });
 
 var b = (() => {
-  var _ref = _asyncToGenerator(function* () {
+  var _ref = babelHelpers.asyncToGenerator(function* () {
     console.log('begin');
     yield new Promise(function (resolve) {
       setTimeout(function () {
