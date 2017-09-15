@@ -4,10 +4,10 @@
 ### [babel-core](https://github.com/sunyongjian/babel-usage/tree/master/babel-core)
 适用于你在代码中去执行 babel 编译。
 
-### [babel-register](https://github.com/sunyongjian/babel-usage/tree/master/babel-register)
+### [babel-register](https://github.com/sunyongjian/babel-usage/tree/master/register)
 适用于开发环境，做解析器用。
 
-### [babel-external-helpers](https://github.com/sunyongjian/babel-usage/tree/master/babel-external-helpers)
+### [babel-external-helpers](https://github.com/sunyongjian/babel-usage/tree/master/helpers)
 了解什么是 babel-helpers，启用了 transform-runtime 就不需要自己生产了。
 
 ### [transform-runtime, babel-polyfill](https://github.com/sunyongjian/babel-usage/tree/master/async-demo)
