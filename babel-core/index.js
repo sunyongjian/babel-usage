@@ -5,4 +5,5 @@ var result = babel.transformFileSync(path.resolve(__dirname) + "/test.js", {
   presets: ['env'],
   plugins: ['transform-runtime'],
 });
-console.log(result.code, 'res');
+
+console.log(result, 'res');

@@ -1,21 +1,21 @@
-const Promise = require('babel-runtime/core-js/promise');
+// const Promise = require('babel-runtime/core-js/promise');
 
-console.log(Promise);
+// console.log(Promise);
 
-const a = 1;
-const b = () => console.log(2);
+// const a = 1;
+// const b = () => console.log(2);
 function* gen() {
   yield 1;
   yield 2;
   yield 3;
 }
 
-new Promise((resolve) => {
-  resolve();
-});
+// new Promise((resolve) => {
+//   resolve();
+// });
 
-Object.assign({}, { a: 1 });
+// Object.assign({}, { a: 1 });
 
-console.log([1, 2, 3].reduce((res, cur) => res + cur));
+// console.log([1, 2, 3].reduce((res, cur) => res + cur));
 
 // var a = 1;

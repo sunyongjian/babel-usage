@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 7);
+/******/ 	return __webpack_require__(__webpack_require__.s = 8);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -89,7 +89,7 @@ module.exports = function (it) {
 /***/ (function(module, exports, __webpack_require__) {
 
 // Thank's IE8 for his funny defineProperty
-module.exports = !__webpack_require__(5)(function () {
+module.exports = !__webpack_require__(6)(function () {
   return Object.defineProperty({}, 'a', { get: function () { return 7; } }).a != 7;
 });
 
@@ -108,6 +108,14 @@ module.exports = function (it) {
 
 /***/ }),
 /* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// require('../helpers');
+__webpack_require__(9);
+__webpack_require__(38);
+
+/***/ }),
+/* 5 */
 /***/ (function(module, exports) {
 
 var core = module.exports = { version: '2.5.1' };
@@ -115,7 +123,7 @@ if (typeof __e == 'number') __e = core; // eslint-disable-line no-undef
 
 
 /***/ }),
-/* 5 */
+/* 6 */
 /***/ (function(module, exports) {
 
 module.exports = function (exec) {
@@ -128,7 +136,7 @@ module.exports = function (exec) {
 
 
 /***/ }),
-/* 6 */
+/* 7 */
 /***/ (function(module, exports) {
 
 // 7.1.4 ToInteger
@@ -140,30 +148,25 @@ module.exports = function (it) {
 
 
 /***/ }),
-/* 7 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(8);
-
-
-/***/ }),
 /* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
-// require('../helpers');
-__webpack_require__(9);
-__webpack_require__(38);
+__webpack_require__(4);
+module.exports = __webpack_require__(4);
+
 
 /***/ }),
 /* 9 */
 /***/ (function(module, exports, __webpack_require__) {
+
+function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step("next", value); }, function (err) { step("throw", err); }); } } return step("next"); }); }; }
 
 Object.values = __webpack_require__(10).default;
 
 console.log(Object.values({ 1: 2 }));
 
 var a = (() => {
-  var _ref = babelHelpers.asyncToGenerator(function* () {
+  var _ref = _asyncToGenerator(function* () {
     console.log('begin');
     yield new Promise(function (resolve) {
       setTimeout(function () {
@@ -192,7 +195,7 @@ module.exports = { "default": __webpack_require__(11), __esModule: true };
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(12);
-module.exports = __webpack_require__(4).Object.values;
+module.exports = __webpack_require__(5).Object.values;
 
 
 /***/ }),
@@ -215,7 +218,7 @@ $export($export.S, 'Object', {
 /***/ (function(module, exports, __webpack_require__) {
 
 var global = __webpack_require__(0);
-var core = __webpack_require__(4);
+var core = __webpack_require__(5);
 var ctx = __webpack_require__(14);
 var hide = __webpack_require__(16);
 var PROTOTYPE = 'prototype';
@@ -364,7 +367,7 @@ module.exports = function (it) {
 /* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = !__webpack_require__(2) && !__webpack_require__(5)(function () {
+module.exports = !__webpack_require__(2) && !__webpack_require__(6)(function () {
   return Object.defineProperty(__webpack_require__(20)('div'), 'a', { get: function () { return 7; } }).a != 7;
 });
 
@@ -550,7 +553,7 @@ module.exports = function (IS_INCLUDES) {
 /***/ (function(module, exports, __webpack_require__) {
 
 // 7.1.15 ToLength
-var toInteger = __webpack_require__(6);
+var toInteger = __webpack_require__(7);
 var min = Math.min;
 module.exports = function (it) {
   return it > 0 ? min(toInteger(it), 0x1fffffffffffff) : 0; // pow(2, 53) - 1 == 9007199254740991
@@ -561,7 +564,7 @@ module.exports = function (it) {
 /* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var toInteger = __webpack_require__(6);
+var toInteger = __webpack_require__(7);
 var max = Math.max;
 var min = Math.min;
 module.exports = function (index, length) {
@@ -625,6 +628,8 @@ exports.f = {}.propertyIsEnumerable;
 /* 38 */
 /***/ (function(module, exports) {
 
+function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step("next", value); }, function (err) { step("throw", err); }); } } return step("next"); }); }; }
+
 new Promise(resolve => {
   setTimeout(() => {
     resolve();
@@ -632,7 +637,7 @@ new Promise(resolve => {
 });
 
 var b = (() => {
-  var _ref = babelHelpers.asyncToGenerator(function* () {
+  var _ref = _asyncToGenerator(function* () {
     console.log('begin');
     yield new Promise(function (resolve) {
       setTimeout(function () {
