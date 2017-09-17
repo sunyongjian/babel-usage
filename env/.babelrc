@@ -20,8 +20,9 @@
   ]
   ,
   "plugins": [
-    "transform-react-jsx", // 如果是需要支持 jsx 这个东西要单独装一下。
-    "transform-runtime"
+    "transform-react-jsx"// 如果是需要支持 jsx 这个东西要单独装一下。
+    // , 
+    // "transform-runtime"
   ]
 }
 

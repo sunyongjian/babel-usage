@@ -1,6 +1,13 @@
 ## 介绍
 通过配置 env 的 options，并查看编译的结果
 
+### 默认值
+babel-preset-env 的默认情况下，作用跟 preset-lastest 是一样的，即包括 preset-es2015,16,17.
+```javascript
+{ "presets": ["latest"] } === { "presets": ["env"] }
+```
+
+
 
 执行 
 ```
@@ -53,4 +60,9 @@ node_modules/.bin/babel env/index.js
 
 
 ### helpers
-使用 webpack 查看 index.js 和 async.js 都用到了 async 函数，_asyncToGenerator 函数是否会多次定义，答案是肯定的，因为没有 runtime，也没有生成 helpers.js 所以他会在各个模块中自己生成。
+使用 webpack 查看 index.js 和 async.js 都用到了 async 函数，_asyncToGenerator 函数是否会多次定义，答案是肯定的，因为没有 runtime，也没有生成 helpers.js 所以他会在各个模块中自己生成。所以这里我们可以自己利用 babel-external-helpers 去生成。[参照](https://github.com/sunyongjian/babel-usage/tree/master/helpers)
+
+
+
+### 最后
+个人觉得 env 适合你了解项目要支持的执行环境，设置好 targets 后，根据映射关系，提供当前所需要的 plugins 和 polyfill。
