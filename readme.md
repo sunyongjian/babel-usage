@@ -26,7 +26,7 @@ mocha 结合 babel 测试 es6+ 的代码。
 
 - env 这个东西，适用于你知道你要运行的环境，它会帮你做好适配。另外，一些特殊的 plugins 还是需要加入的。要清楚它能做到什么。
 
-- env 默认情况下，跟 preset-lastest 一样，都包括了 preset-es2015,es2016,es2017.
+- env 默认情况下，跟 preset-lastest 一样，都包括了 preset-es2015,es2016,es2017。如果你要使用一些[提案](http://exploringjs.com/es2016-es2017/ch_tc39-process.html)中的语法，还要加上 `preset-stage-x` 。
 
 
 
