@@ -158,12 +158,14 @@ __webpack_require__(38);
 /* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
+function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step("next", value); }, function (err) { step("throw", err); }); } } return step("next"); }); }; }
+
 Object.values = __webpack_require__(10).default;
 
 console.log(Object.values({ 1: 2 }));
 
 var a = (() => {
-  var _ref = babelHelpers.asyncToGenerator(function* () {
+  var _ref = _asyncToGenerator(function* () {
     console.log('begin');
     yield new Promise(function (resolve) {
       setTimeout(function () {
@@ -625,6 +627,8 @@ exports.f = {}.propertyIsEnumerable;
 /* 38 */
 /***/ (function(module, exports) {
 
+function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step("next", value); }, function (err) { step("throw", err); }); } } return step("next"); }); }; }
+
 new Promise(resolve => {
   setTimeout(() => {
     resolve();
@@ -632,7 +636,7 @@ new Promise(resolve => {
 });
 
 var b = (() => {
-  var _ref = babelHelpers.asyncToGenerator(function* () {
+  var _ref = _asyncToGenerator(function* () {
     console.log('begin');
     yield new Promise(function (resolve) {
       setTimeout(function () {
