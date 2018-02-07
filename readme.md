@@ -1,3 +1,7 @@
+## Issues
+
+有任何此 repo 的问题，或者 babel 使用的疑惑，都可以新建 issue，一起讨论~
+
 ## 介绍
 多个 babel 包的使用 example，每个文件夹下对应有 .babelrc 和 README，可以查看用法。
 
