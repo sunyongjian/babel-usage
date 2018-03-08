@@ -22,7 +22,7 @@
 
 通过 webpack 打包，检测 transform-runtime 的效果，是否会重复引入 asyncToGenerator 函数，build 文件 size 。
 
-### [mocha](https://github.com/sunyongjian/babel-usage/tree/master/mocha)
+### [mocha](https://github.com/sunyongjian/babel-usage/tree/master/test)
 
 mocha 结合 babel 测试 es6+ 的代码。
 
