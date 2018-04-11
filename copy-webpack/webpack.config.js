@@ -3,6 +3,8 @@ const webpack = require('webpack');
 const path = require('path');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
+const transform = require('./transform');
+
 module.exports = {
   entry: "./index.js",
   output: {
@@ -13,7 +15,8 @@ module.exports = {
     new CopyWebpackPlugin([
       {
         from: 'a.js',
-        to: 'dist.js',
+        to: 'b.js',
+        transform,
       },
     ]),
   ]
